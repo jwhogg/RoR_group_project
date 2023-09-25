@@ -1,0 +1,32 @@
+-# This code represents a simple Signup form
+-# Created by Team 29
+
+.space
+  .settings-heading
+    %h2 
+      Sign up #{resource_name.to_s.humanize} Account
+    %p
+      Below you can create your #{resource_name.to_s.humanize} account. Please provide a password that is longer than #{@minimum_password_length} characters
+      and a University of Sheffield email address - ending in @sheffield.ac.uk
+  = render "devise/shared/error_messages", resource: resource
+
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      %br
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    
+    .field
+      = f.label :password
+      %br
+      = f.password_field :password, autocomplete: "new-password"
+
+    .field
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation, autocomplete: "new-password"
+    %br
+    .field
+      = f.submit "Sign up"
+  #return
+    = link_to "Return to Previous page", :back

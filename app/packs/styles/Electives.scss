@@ -1,0 +1,45 @@
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffffff;
+  }
+  .card img {
+    max-width: 100%;
+  }
+
+  .card-header {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 0%;
+  }
+
+  .card-footer{
+    text-align: left;
+    padding: 0%;
+    border-top: none;
+
+  }
+  
+  .caption{
+    text-align: center;
+  }
+
+ .card iframe {
+  padding-top: 2%;
+  padding-right:2%;
+ }

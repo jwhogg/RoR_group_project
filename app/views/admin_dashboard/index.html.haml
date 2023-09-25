@@ -1,0 +1,27 @@
+-# The code represents the admin dashboard which includes Questions and answers waiting to be moderated.
+-# Created by Team 29
+%h1 Admin Dashboard
+
+.row
+  .col
+    %h2.questions Questions
+    .questions-grid
+      - @questions.each do |question|
+        .question
+          %div.question-text
+            %h3.question-title= question.title
+            %p.question-body= question.body
+          %div.actions
+            - unless question.approved
+              = link_to 'Approve', approve_question_path(question), method: :put, class:"approve-btn"
+            = link_to 'Deny', question, method: :delete, data: { confirm: 'Are you sure?' },class:"deny-btn"
+  .col
+    %h2 Answers
+    .answers-grid
+      - @answers.each do |answer|
+        .answer
+          %p.answer-body= answer.body
+          .actions
+            - unless answer.approved
+              = link_to 'Approve', approve_answer_path(answer), method: :put, class:"approve-btn"
+            = link_to 'Deny', answer_path(answer), method: :delete, data: { confirm: 'Are you sure?' },class:"deny-btn"

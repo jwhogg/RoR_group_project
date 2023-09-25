@@ -1,0 +1,39 @@
+-# This code displays a list of electives in a table
+-# Created by Team 29
+
+- content_for(:title, 'Electives System')
+
+.card
+  .card-header.d-flex.align-items-center
+    %span Listing Electives
+
+    - if current_user.admin?
+      = link_to 'New Elective', new_elective_path, class: 'btn btn-outline-secondary ms-auto'
+
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th Description
+        %th Speciality
+        %th Location
+        %th Accomodation
+        %th Wp support
+        %th Type
+        %th
+    %tbody
+      - @electives.each do |elective|
+        %tr
+          %td= elective.Title
+          %td= elective.Description
+          %td= elective.Speciality
+          %td= elective.Location
+          %td= elective.Accomodation
+          %td= elective.WP_Support
+          %td= elective.Type
+          %td
+            .btn-toolbar.float-end
+              = link_to 'Show', elective, class: 'btn btn-outline-secondary btn-sm'
+              - if current_user.admin?
+                = link_to 'Edit', edit_elective_path(elective), class: 'btn btn-outline-secondary ms-1 btn-sm'
+                = link_to 'Destroy', elective, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger ms-1 btn-sm'

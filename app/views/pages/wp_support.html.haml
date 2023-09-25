@@ -1,0 +1,117 @@
+-# This is a static Widening Participation Student Support page that provides medical students with general information about being a WP student and the support availiable to students from this demographic and availiable contacts.
+-# Created by Team 29
+.space
+  %h2
+    %strong Widening Participation Student Support
+  %p
+    .body 
+      We encourage applications from Home students who are members of underrepresented groups and from people who have the potential to be excellent doctors who would not ordinarily choose this career path seriously.
+  %hr
+  .container.text-center
+    .row
+      .col
+        %h4.wp
+          %strong On this Page: 
+
+        %li.wpList{style: "white-space: nowrap; border-bottom: 2px solid #D0D2D4; font-weight: 600;"}
+          %a{ :href => "#wp-student", :style => "color: #440099;", :title => "Who is a WP student?" }
+            Who is a WP student?
+
+        %li.wpList{style: "white-space: nowrap; border-bottom: 2px solid #D0D2D4; font-weight: 600;"}
+          %a{ :href => "#general-info", :style => "color: #440099;", :title => "General Information" }
+            General Information
+
+        %li.wpList{style: "white-space: nowrap; border-bottom: 2px solid #D0D2D4; font-weight: 600;"}
+          %a{ :href => "#aids", :style => "color: #440099;", :title => "Financial Aids and Support" }
+            Financial Aids and Support
+
+        %li.wpList{style: "white-space: nowrap; border-bottom: 2px solid #D0D2D4; font-weight: 600;"}
+          %a{ :href => "#communities", :style => "color: #440099;", :title => "Student Communities and Reviews" }
+            Student Communities
+
+        %li.wpList{style: "white-space: nowrap; border-bottom: 2px solid #D0D2D4; font-weight: 600;"}
+          %a{ :href => "#contact", :style => "color: #440099;", :title => "Not sure who to contact?" }
+            Not sure who to contact?
+      .col
+        .wpImage
+          =image_pack_tag 'studentDoctors.png',height: 225
+
+  %hr.short
+
+  %h4#wp-student
+    %strong Who is a WP Student?
+  %p 
+    We have established entrance points for home students from Widening Participation backgrounds who are enrolled in certain programmes at the Universities of Bradford and Sheffield Hallam in addition to these three broadening participation programmes. Widening Participation students are applicants who are residents of neighbourhoods with low participation in higher education, care leavers, students who are estranged from their families, and carers may be eligible for an alternative offer equivalent to one grade below the standard A Level entry requirements provided they make Sheffield their Firm choice with UCAS.
+
+  %hr.short
+
+  %h4#general-info
+    %strong General Information
+  %p 
+    Widening participation in higher education has been a priority for many universities in recent years, as it recognizes the need to create a more diverse student body that reflects the wider society. It is crucial to ensure that students from all backgrounds have the opportunity to access higher education, regardless of their socio-economic background, race, gender or any other characteristic that may have previously hindered their progress. This essay will explore the importance of widening participation communities in higher education, particularly for students studying at university. 
+  %p
+    Elective assignments are a crucial component of the MBChB degree because they give students a more varied exposure to clinical practise, support confidence development, and sharpen their abilities to provide effective healthcare. Medical students at TUoS have the chance to take a variety of electives as part of their study. The 8-week specialty placement in Phase 3B, which is self-directed, is the longest elective and the subject of this proposal.
+ 
+    Medical students can improve their prospects, explore specialties that might not be accessible locally, and plan their future career trajectories through electives. The elective that medical students choose must be planned and paid for independently. A very little bursary is given for electives, however it is not based on financial need.
+
+  %hr.short
+
+  %h4#aids
+    %strong Financial Aids and Support
+  %p 
+    By analysis of how financial support can remove obstacles to participation and/or success, financial support tailored to students from WP backgrounds has been created. Students who match the requirements for low income and IMD or Polar 3/4 Quintile 1 as well as mature, full-time first-degree students on specified foundation programmes are eligible for bursaries of around £1,250 per year. 
+    %n Students who are estranged from their families, carers, and looked-after children/care leavers are eligible for £4,500 annual subsidies. A hardship fund provides assistance to any student who has major unplanned expenses that could prevent them from continuing; typically, 70% of this fund is given to students from underrepresented groups each year. Experience Sheffield scholarships are given to incoming students from underrepresented groups at a minimum of 150 times annually.
+  %li.middle
+    = link_to 'Financial Information Page', finances_path, title: 'Go to the finance page', class: 'nav-link px-2'
+  %p
+    The university provides 365-day housing together with an accomodation subsidy to assist students who are care-experienced or estranged from their relatives. The University has also agreed to support alienated students by joining the Stand Alone Pledge, and it is currently working to join the Care Leaver Covenant.
+
+  %hr.short
+
+  %h4#communities
+    %strong Student Communities
+  %p 
+    The University of Sheffield has a variety of support groups and initiatives designed especially for students from underrepresented groups. These are a few instances:
+
+    %n The Sheffield Scholars Program offers extra help and direction to students who are the first in their family to enrol in college or who are from low-income families. The programme provides networking opportunities, financial support, and academic mentoring.
+
+    %n Study Skills Sessions: The University of Sheffield Library conducts specialised study skills sessions in addition to general study skills workshops for all students.
+  %li.middle
+    = link_to 'Placement Review Page', electives_url, title: 'Go to the elective page', class: 'nav-link px-2'
+  %p
+    Mentoring Programs: The University of Sheffield provides a number of mentoring programmes, including the US in Schools Mentoring Program and the Sheffield Scholars Mentoring Program, for students from underrepresented groups. These programmes pair students with a mentor who can offer both academic and emotional assistance as they pursue their degrees. We have feedback and contact information available from past students who have completed electives and are willing to share their experiences. Please let us know if you would like to get in touch with them or have any questions.
+
+  %hr.short
+
+  %h4#contact
+    %strong Not sure who to contact ?
+
+  %p.contact
+    %strong If you would like more information about Discover Medicine, please contact Rebecca Haire, Outreach Coordinator:
+  %li.wpContact
+    Tel: +44 114 222 1021
+  %li.wpContact
+    Email: r.haire@sheffield.ac.uk
+  %br
+
+  %p.contact
+    %strong If you would like more information about the Discover Sheffield programme, please contact the Discover Sheffield Team:
+  %li.wpContact
+    Tel: +44 114 222 1027
+  %li.wpContact
+    Email: discoversheffield@sheffield.ac.uk
+  %br
+
+  %p.contact
+    %strong If you would like more information about the Realising Opportunities scheme, please contact Denise Brooks, Outreach and Widening Participation Officer:
+  %li.wpContact
+    Tel: +44 114 222 1027
+  %li.wpContact
+    Email: ROSheffield@sheffield.ac.uk
+  %br
+
+  %hr.short
+
+
+
+      

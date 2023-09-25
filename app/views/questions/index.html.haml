@@ -1,0 +1,21 @@
+-# This page is used to display a list of approved questions and answers related to an elective.
+-# Created by Team 29
+%h4.text= @elective.Title
+%h1 Questions & Answers
+
+%ul#accordion
+
+  - @questions.each do |question|
+    %li
+      %label{:for => "accordion-#{question.id}"}
+        =question.title
+        %span >
+      %input{:id =>"accordion-#{question.id}", :name => "accordion", :type => "radio"}/
+      .content
+        - question.answers.where(approved: true).each do |answer|
+          %ul=answer.body
+          
+        = render 'answers/form', question: question, answer: question.answers.build
+
+= link_to 'Ask a new question', new_elective_question_path(@elective),class: 'btn btn-link'
+= link_to 'Back to Electives', (@elective),class: 'btn btn-link'

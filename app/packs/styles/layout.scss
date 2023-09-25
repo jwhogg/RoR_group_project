@@ -1,0 +1,463 @@
+$nav_bar_colour_one: rgba(0, 0, 0, 0.696);
+
+html {
+  min-height: 100%
+}
+/*Nav Bar*/
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  /*Navigation menu*/
+  .navbar{
+    height: 50px;
+  }
+
+  #navlist{
+    display: flex;
+    align-items: end;
+  }
+ .container-fluid {
+  position: absolute;
+  margin: 0 0 0 0;
+  padding-left: 0;
+  padding-top: 0;
+ }
+
+  header ul {
+    display:flex;
+  }
+
+  header ul li{
+    margin: 0;
+    list-style: none;
+    position: relative;
+    white-space: nowrap;
+    padding: 23px 0 10px 22px;
+    font-size: 15px;
+  }
+
+  .btn {
+     margin-left: 25px;
+     color: white;
+     border-radius: 4px;
+     padding: 6px 25px 8px 20px;
+     white-space: nowrap;
+     transition: 0.3s;
+     font-size:10px;
+     display: inline-block;
+     text-transform: uppercase;
+     border: 1px solid black;
+     font-weight: 400;
+     font-family: "Poppins", sans-serif;
+     background-color:  #5125ad;
+     height: 30px;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  /*Widening Participation*/
+h2{
+  display: flex;
+  justify-content: center;
+  border: 2px ;
+}
+
+hr{
+ margin: auto;
+ width: 98%;
+ border-style: solid;
+ border-color: black;
+ height: 10px;
+}
+
+.short{
+  width: 65%;
+  margin-left: 0%;
+}
+
+.space{
+ margin: auto;
+ padding: 25 50;
+}
+
+.body{
+ text-align: center;
+}
+
+.wpImage{
+  align-self: right;
+  padding: 0 10px 10px 500px;
+}
+
+.middle{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: blue;
+}
+
+.wpList{
+  text-align: left;
+  padding: 0 0 15px 25px;
+}
+
+.wp{
+  display: block;
+  text-align: left;
+}
+.contact{
+  font-size: 16px;
+}
+
+.wpContact{
+  padding: 0 0 15px 50px;
+}
+
+
+
+/*Financial Support Page*/
+h2{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+p{
+  font-size: 13px;
+  padding: 0 0 15px 25px;
+}
+
+  
+h4{
+  font-size: 20px;
+}
+
+.fp{
+  list-style: none;
+}
+
+}
+
+.flash-messages{
+  margin: auto;
+}
+
+/*Alert stylings, including different styles for success and failure*/
+.alert {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  padding: 0.5%;
+  text-align: center;
+  margin: 1%;
+  margin-left: 24%;
+  color: white;
+  border-color: black;
+  border-width: 2px;
+}
+
+.alert.alert-success {
+  background-color:  #5125ad;
+}
+
+.alert.alert-success:hover {
+  background-color: rgb(11,94,215);
+  border-color: white;
+}
+
+.alert.alert-danger {
+  background-color: rgb(200, 0, 0);
+}
+
+.alert.alert-danger:hover {
+  background-color: rgb(140, 0, 0);
+  border-color: white;
+}
+
+.alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  margin: 0.5%;
+  border-color: lightgrey;
+  background-color: white;
+}
+
+.alert-close:hover {
+  background-color: lightgrey;
+  border-color: darkgrey;
+}
+
+/*Styling for the settings page for editing existing account*/
+.container-fluid .field {
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+}
+
+.container-fluid .field label {
+  font-size: 1.2rem;
+}
+
+.container-fluid #wp.field label {
+  padding-left: 0.25%;
+  padding-right: 0.25%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: whitesmoke;
+}
+
+.container-fluid .actions input {
+  margin-left: 1%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  font-size: 1.2rem;
+}
+
+.container-fluid .cancel {
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+
+.container-fluid form#edit_user.edit_user {
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+
+.container-fluid .cancel h3 {
+  margin-top: 1%;
+  margin-left: 1%;
+  font-size: 1.7rem;
+  font-style: oblique;
+}
+
+.container-fluid .cancel #text {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+}
+
+.container-fluid .cancel #buttons {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+}
+
+.container-fluid #return {
+  margin-top: 1%;
+}
+
+.container-fluid #return a {
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  padding-left: 0.25%;
+  padding-right: 0.25%;
+  padding-bottom: 0.25%;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+.container-fluid #return a:hover {
+  color: blue;
+  font-size: 1.25rem;
+}
+
+.container-fluid .settings-heading {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.container-fluid .settings-heading h2 {
+  font-size: 2.2rem;
+  font-style: oblique;
+}
+
+.container-fluid .settings-heading p {
+  font-size: 1.2rem;
+}
+
+.container-fluid #error_explanation {
+  margin: 1% auto;
+  border: 2px solid black;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  width: 55%;
+}
+
+.container-fluid #error_explanation ul {
+  margin: auto;
+  padding: 0.5%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.container-fluid form#edit_user.edit_user input {
+  background-color: white;
+}
+
+/*Sign up CSS styling*/
+
+.container-fluid form#new_user.new_user {
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+
+.container-fluid form#new_user.new_user input {
+  background-color: white;
+}
+
+/*Login extra CSS styling*/
+.container-fluid form#new_user.new_user .card-footer a {
+  margin-left: 16px;
+  margin-bottom: 16px;
+  color: white;
+  border-radius: 4px;
+  padding: 6px 25px 8px 20px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size:10px;
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid black;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color:  #5125ad;
+  height: 30px;
+  text-decoration: none;
+}
+
+.container-fluid form#new_user.new_user .card-footer button {
+  margin-left: 16px;
+  color: white;
+  border-radius: 4px;
+  padding: 6px 25px 8px 20px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size:10px;
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid black;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color:  #5125ad;
+  height: 30px;
+  text-decoration: none;
+}
+
+.container-fluid form#new_user.new_user .card-footer button:hover {
+  background-color: rgb(11,94,215);
+  border-color: white;
+}
+
+.container-fluid form#new_user.new_user .card-footer a:hover {
+  background-color: rgb(11,94,215);
+  border-color: white;
+}
+
+/*Fixes an issue with margin alignment on search page*/
+.container-fluid input#search_electives_button.btn {
+  margin: auto;
+  margin-top: 2%;
+}
+
+.container-fluid div#new-elective {
+  background-color: lightgrey;
+  padding: 1%;
+  border: 2px solid black;
+  margin-bottom: 1%;
+}
+
+.container-fluid form#new_user.simple_form.new_user {
+  margin: 0%;
+  width: 100%;
+}
+
+.container-fluid form.simple_form.search {
+  border: 2px solid black;
+  background-color: lightgrey;
+  padding: 1%
+}
+
+/*The FAQ Page + Q&A Page*/
+#accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+}
+
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+  background-color: #f0eff1;
+}
+
+#accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: #5125ad;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+h1 {
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  padding-left: 0%;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
+
+.content ul {
+  list-style-type: circle;
+  border-left: 5px solid #5125ad ;
+  padding: 0.5%;
+  margin-trim: auto;
+}

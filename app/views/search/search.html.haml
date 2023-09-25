@@ -1,0 +1,21 @@
+-# This code represents a form for searching electives, with specific roles for Admins such as adding new electives.
+-# Created by Team 29
+
+.space
+  #new-elective
+    - if current_user.admin?
+      %h3 Add a new Elective here:
+      = link_to 'New Elective', new_elective_path, class: 'btn btn-outline-secondary ms-auto'
+    
+  %h2 Search for an Elective:
+  = simple_form_for :search, method: :get, remote: true, url: "search_electives" do |f|
+    .card-body
+      = f.input :Title, collection: @titles, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.input :Speciality, collection: @specialities, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.input :Location, collection: @locations, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.input :Accomodation, collection: @accommodaitons, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.input :WP_Support, collection: @wps, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.input :Type, collection: @types, wrapper_html: { class: 'mb-3' }, selected: @default
+      = f.button :submit, value: "Search for Electives", id: "search_electives_button"
+
+  #search_results

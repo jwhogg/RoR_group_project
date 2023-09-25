@@ -1,0 +1,10 @@
+-# This code represents a form for answering questions. 
+-# Created by Team 29
+
+= simple_form_for [question, answer], html: {multipart: true} do |f|
+  = f.error_notification
+
+  = f.input :body, label: 'Add new Answer', as: :text, required: true
+
+  .actions
+    = f.button :submit, 'Submit Answer'

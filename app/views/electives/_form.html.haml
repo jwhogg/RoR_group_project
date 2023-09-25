@@ -1,0 +1,18 @@
+-# The code snippet represents a form for editing an elective using the simple_form_for helper.
+-# Created by Team 29
+
+-# frozen_string_literal: true
+= simple_form_for(@elective) do |f|
+  .card-body
+    = f.input :Title, wrapper_html: { class: 'mb-3' }
+    = f.input :Description, wrapper_html: { class: 'mb-3' }
+    = f.input :Speciality, wrapper_html: { class: 'mb-3' }
+    = f.input :Location, wrapper_html: { class: 'mb-3' }
+    = f.input :Accomodation, wrapper_html: { class: 'mb-3' }
+    = f.input :WP_Support, wrapper_html: { class: 'mb-3' }
+    = f.input :Type, wrapper_html: { class: 'mb-3' }
+
+  .card-footer.d-flex
+    %button.btn.btn-primary{ type: 'submit' }
+      Save
+    = link_to 'Back', electives_path, class: 'btn btn-link ms-auto'

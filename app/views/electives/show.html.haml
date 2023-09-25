@@ -1,0 +1,49 @@
+-# The code represents an HTML structure for displaying elective information and related content.
+-# Created by Team 29.
+
+%html{ lang: 'en-GB' }
+  %head
+  
+  %body
+    .card-group
+      .card
+        .card-body
+          %h2.card-header= @elective.Title
+          %p.card-text= @elective.Description
+          %dt.card-text Speciality:
+          %dd.card-text= @elective.Speciality
+          %dt.card-text Type:
+          %dd.card-text= @elective.Type
+          %dt.card-text Wp support:
+          %dd.card-text= @elective.WP_Support
+        .card-footer
+          = link_to 'View Q&A', elective_questions_path(@elective),class: 'btn btn-link'
+          - if current_user.admin?
+            = link_to 'Edit', edit_elective_path(@elective), class: 'btn btn-link'
+      .card
+        %img.card-img-top= image_pack_tag "Hospital.jpg"  
+      
+
+    .card-group
+      .card
+        .card-body
+          %h2.card-header= @elective.Location
+          %p.card-text= @elective.Description
+          %h2.card-header Accomodations
+          .row
+            .column
+              %img= image_pack_tag "Hospital.jpg", width:"100%"
+              .caption= link_to 'View Accomodations', class: 'btn btn-link'
+            .column
+              %img= image_pack_tag "Hospital.jpg", width: "100%"
+              .caption= link_to 'View Accomodations', class: 'btn btn-link'
+            .column
+              %img= image_pack_tag"Hospital.jpg", width:"100%"
+              .caption= link_to 'View Accomodations', class: 'btn btn-link'
+        
+      
+      .card
+        %iframe{allowfullscreen: "", height:"100%" , loading: "lazy", referrerpolicy: "no-referrer-when-downgrade", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.238845301145!2d-1.4597067840100557!3d53.41055447760073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48797859f617712d%3A0x73c0c934cd519309!2sNorthern%20General%20Hospital!5e0!3m2!1sen!2suk!4v1679507971121!5m2!1sen!2suk", style: "border:0;", width: "100%"}
+        
+          
+        

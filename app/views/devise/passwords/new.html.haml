@@ -1,0 +1,23 @@
+-# This code represents a simple "Forgot Password" form for requesting a password reset.
+-# Created by Team 29
+
+.space
+  .settings-heading
+    %h2 
+      Forgot your password, #{resource_name.to_s.humanize}?
+    %p
+      Below you can request to change your password, #{resource_name.to_s.humanize}. Please provide a password that is longer than #{@minimum_password_length} characters
+      and a University of Sheffield email address - ending in @sheffield.ac.uk
+  = render "devise/shared/error_messages", resource: resource
+
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      %br
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    %br
+    .actions
+      = f.submit "Send me reset password instructions"
+
+  #return
+    = link_to "Return to Previous page", :back

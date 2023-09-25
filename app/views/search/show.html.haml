@@ -1,0 +1,35 @@
+-# The code displays a table containing information about electives
+-# Created by Team 29
+- if @electives.present?
+  .card
+    .card-header.d-flex.align-items-center
+      %span Found Electives
+
+    %table.table
+      %thead
+        %tr
+          %th Title
+          %th Description
+          %th Speciality
+          %th Location
+          %th Accomodation
+          %th Wp support
+          %th Type
+          %th
+      %tbody
+        - @electives.each do |elective|
+          %tr
+            %td= elective.Title
+            %td= elective.Description
+            %td= elective.Speciality
+            %td= elective.Location
+            %td= elective.Accomodation
+            %td= elective.WP_Support
+            %td= elective.Type
+            %td
+              .btn-toolbar.float-end
+                = link_to 'Show', elective, class: 'btn btn-outline-secondary btn-sm'
+
+- else
+  %h3 No Electives Found!
+

@@ -1,0 +1,12 @@
+-# This page generates a form for creating or editing a question associated with a specific elective.
+-# Created by Team 29
+
+= simple_form_for [@elective, @question], html: {multipart: true} do |f|
+  = f.error_notification
+  = f.input :elective_id, as: :hidden, input_html: {value: @elective.id}
+
+  = f.input :title, label: 'Title', required: true
+  = f.input :body, label: 'Body', as: :text, required: true
+
+  .actions
+    = f.button :submit

@@ -1,0 +1,71 @@
+-# This page includes the basic HTML structure with a head, body and Nav bar,
+-# The format that this page provides would be replicated across the website
+-# It also handlesflash messages for displaying alerts.
+-# Created by Team 29
+
+%html{ lang: 'en-GB' }
+  %head
+    %title Project
+
+    %meta{ :'http-equiv' => "content-type", content: "text/html; charset=utf-8" }
+    %meta{ :'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, shrink-to-fit=no" }
+
+    - if content_for(:description)
+      %meta{ content: content_for(:description), name: 'description' }
+
+    %title= ["Project", content_for(:title)].compact.join(' - ')
+
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_pack_tag 'styles', media: 'all'
+    = javascript_pack_tag 'application'
+
+  %body
+    %header.navbar.navbar-expand-lg.bg-light.mb-3
+      .container-fluid
+        = link_to '/', class: 'navbar-brand' do
+          = image_pack_tag 'uniLogo.png', height: 50
+        %button.navbar-toggler{ type: :button, data: { bs_toggle: :collapse, bs_target: '#navbar-content' }, aria: { controls: 'navbar-content', expanded: 'false', label: 'Toggle navigation' } }
+          %span.navbar-toggler-icon
+
+        %ul
+          %li
+            = link_to 'Home', root_url, title: 'Go to the home page', class: 'nav-link px-2'
+          %li
+            = link_to 'WP Support', wp_support_path, title: 'Go to the WP Support page', class: 'nav-link px-2'
+          %li
+            = link_to 'Search', search_path, title: 'Go to the elective search page', class: 'nav-link px-2'
+          %li
+            = link_to 'Finances', finances_path, title: 'Go to the finance page', class: 'nav-link px-2'
+          %li
+            = link_to 'FAQ', faq_path, title: 'Go to the FAQ page', class: 'nav-link px-2'
+          - if user_signed_in?
+            %li
+              = link_to 'Settings', edit_user_registration_path, title: 'Go to the settings page', class: 'nav-link px-2'
+            - if current_user.admin?
+              %li
+                = link_to 'Admin Dashboard', admin_dashboard_path, class: 'nav-link'
+            %li
+              = link_to destroy_user_session_path, method: :delete, class: 'nav-link' do
+                Logout
+          - else
+            %li
+              = link_to 'Login', new_user_session_path, class: 'nav-link'
+              
+    %main
+      .container-fluid
+        = yield
+
+    - if flash.present?
+      .container-fluid.flash-messages
+        - flash.each do |message_type, message|
+          - next unless message_type == 'alert' || message_type == 'notice'
+          .alert{title:'Website Alert', class: "alert-#{ message_type == 'notice' ? 'success' : 'danger' }" }
+            = message
+            %button.alert-close{type: 'button', title:'Close Alert'}
+
+
+
+    
